@@ -1,0 +1,9 @@
+docker run -d -e "SPRING_PROFILES_ACTIVE=local" -p 8080:8080 --name cliente-spring-data-rest silasca/cliente-spring-data-rest
+
+docker run -p 8181:8080 -p 50000:50000 -v /your/home:/var/jenkins_home jenkins
+
+docker build -t silasca/cliente-spring-data-rest .
+docker run -d -e "SPRING_PROFILES_ACTIVE=local" -p 8080:8080 --name cliente-spring-data-rest silasca/cliente-spring-data-rest
+
+
+docker run -p 8181:8080 -p 50000:50000 -v /macsilas/jenkins_home:/var/jenkins_home jenkins
