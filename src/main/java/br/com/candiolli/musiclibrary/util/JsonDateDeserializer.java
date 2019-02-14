@@ -14,7 +14,7 @@ import java.util.Date;
 @Component
 public class JsonDateDeserializer extends JsonDeserializer<Date> {
 
-	private SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+	private SimpleDateFormat formatter = new SimpleDateFormat("YYYY-MM-dd");
 	private static final Logger LOG = LoggerFactory.getLogger(JsonDateDeserializer.class);
 
 	@Override

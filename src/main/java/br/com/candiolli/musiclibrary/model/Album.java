@@ -8,7 +8,9 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.Data;
 import org.hibernate.envers.AuditTable;
 import org.hibernate.envers.Audited;
+import org.springframework.data.rest.core.annotation.RestResource;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -38,12 +40,13 @@ public class Album implements Serializable {
     @Column
     private String author;
 
-    @ManyToOne
-    @JoinColumn(name = "album_id", nullable = false)
+    @ManyToOne(cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "productor_id", nullable = false)
+    @RestResource(exported = false)
     private Productor productor;
 
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    @Column(name = "dt_create")
+    @JsonFormat(pattern = "YYYY-MM-dd")
+    @Column(name = "dt_create", nullable = false)
     @JsonSerialize(using = JsonDateSerializer.class)
     @JsonDeserialize(using = JsonDateDeserializer.class)
     private LocalDateTime dateCreate;
