@@ -18,7 +18,7 @@
 	
 	- O módulo Envers visa fornecer uma solução fácil de auditoria / controle de versão para classes de entidade.
 	
-#Na pratica
+#8 - Na pratica
 
 	#1 Estrutura do projeto
 	
