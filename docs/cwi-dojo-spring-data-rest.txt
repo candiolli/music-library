@@ -25,10 +25,11 @@
 	#2 Arquivo de properties
 
 	#3 Entidades e repositories
-	
-	#4 Exemplos de requisições
-	
-	#5 O que é o /profile
+
+	#4 O que é o /profile
+
+	#5 Exemplos de requisições
+
 	
 	
 	
